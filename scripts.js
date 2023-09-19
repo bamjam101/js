@@ -1,5 +1,3 @@
-let blogsToRender = [];
-
 let currentBlog = {};
 
 function onChange(event) {
@@ -8,8 +6,6 @@ function onChange(event) {
 
 function onSubmit(event) {
   event.preventDefault();
-
-  blogsToRender = [...blogsToRender, currentBlog];
 
   addCurrentBlogToBlogContainer();
   currentBlog = {};
@@ -27,7 +23,7 @@ function addCurrentBlogToBlogContainer() {
               <h3>${currentBlog.title}</h3>
           </header>
           <main>
-              <p class="sub-title">${currentBlog.subTitle}</p>
+              <p class="sub-title">${currentBlog["sub-title"]}</p>
               <p class="description">${currentBlog.description}</p>
           </main>
           <footer>
